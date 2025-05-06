@@ -23,6 +23,10 @@ app.add_middleware(
 def read_root():
     return FileResponse(os.path.join("static", "index.html"))
 
+@app.get("/favicon.ico")
+async def favicon():
+    return FileResponse("frontend/info.png")  
+
 @app.get("/health")
 def health_check():
     return {"status" : "healthy"}
