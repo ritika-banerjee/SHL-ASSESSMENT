@@ -84,3 +84,25 @@ a:hover {
   font-style: italic;
   color: #6a0dad;
 }
+
+.description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  max-width: 400px;
+  text-overflow: ellipsis;
+}
+
+.description.expanded {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.toggle-link {
+  color: #4b0082;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 0.9em;
+}
+

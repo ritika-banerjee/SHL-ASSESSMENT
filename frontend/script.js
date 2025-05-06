@@ -33,15 +33,32 @@ async function getRecommendations() {
     } else {
       assessments.forEach(item => {
         const row = document.createElement("tr");
+
+        const descId = `desc-${Math.random().toString(36).substr(2, 9)}`; // unique ID
+
         row.innerHTML = `
           <td>${item.test_type || "N/A"}</td>
           <td>${item.duration}</td>
           <td>${item.adaptive_support}</td>
           <td>${item.remote_support}</td>
-          <td>${item.description.slice(0, 100)}...</td>
+          <td>
+            <div id="${descId}" class="description short-text">${item.description}</div>
+            <a href="javascript:void(0);" class="read-more-link" data-target="${descId}">Read more</a>
+          </td>
           <td><a href="${item.url}" target="_blank">View</a></td>
         `;
+
         tbody.appendChild(row);
+      });
+
+      // Add toggle logic after rendering
+      document.querySelectorAll('.read-more-link').forEach(link => {
+        link.addEventListener('click', function () {
+          const descId = this.getAttribute('data-target');
+          const descDiv = document.getElementById(descId);
+          descDiv.classList.toggle('expanded');
+          this.textContent = descDiv.classList.contains('expanded') ? 'Read less' : 'Read more';
+        });
       });
     }
 
