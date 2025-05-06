@@ -1,4 +1,4 @@
-const API_BASE = "https://shl-assessment-production-9508.up.railway.app/";
+const API_BASE = "https://shl-recommender-system-up7b.onrender.com";
 
 async function getRecommendations() {
   const jobDesc = document.getElementById("job-description").value.trim();
