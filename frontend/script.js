@@ -1,3 +1,5 @@
+const API_BASE = "https://shl-assessment-production-9508.up.railway.app/";
+
 async function getRecommendations() {
   const jobDesc = document.getElementById("job-description").value.trim();
   const table = document.getElementById("results-table");
@@ -15,7 +17,7 @@ async function getRecommendations() {
   loading.classList.remove("hidden");
 
   try {
-    const response = await fetch("/recommend", {
+    const response = await fetch(`${API_BASE}/recommend`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

@@ -11,9 +11,6 @@
     # Copy backend source code
     COPY backend/ .
     
-    # Copy frontend files into backend/static if FastAPI serves them
-    COPY frontend/ ./static
-    
     # Expose FastAPI port
     EXPOSE 8000
     
