@@ -15,7 +15,7 @@ async function getRecommendations() {
   loading.classList.remove("hidden");
 
   try {
-    const response = await fetch("http://localhost:8000/recommend", {
+    const response = await fetch("/recommend", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
