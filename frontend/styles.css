@@ -1,0 +1,86 @@
+/* Background setup */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('3418448.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #0e000b;
+}
+
+/* Overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(14, 9, 9, 0.85);
+  z-index: -1;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff8f8;
+}
+
+/* Input + button */
+.input-group {
+  text-align: center;
+  margin-bottom: 20px;
+}
+input[type="text"] {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  border: none;
+  background-color: #4b0082;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #6a0dad;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #53034f;
+  color: white;
+}
+tr {
+  background-color: #f9f9f9f1;
+}
+a {
+  color: #38003f;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Loading + hidden */
+.hidden {
+  display: none;
+}
+#loading {
+  text-align: center;
+  font-style: italic;
+  color: #6a0dad;
+}

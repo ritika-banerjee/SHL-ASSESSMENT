@@ -1,0 +1,12 @@
+pinecone
+python-dotenv
+beautifulsoup4 
+playwright
+fastapi
+uvicorn
+pandas
+numpy
+scikit-learn
+sentence-transformers
+openpyxl 
+google-generativeai
